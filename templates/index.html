@@ -1,14 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+    <title> RASPYED - Home Security </title>
 </head>
 <body>
-    Hello
-    <h1>Welcome Home</h1>
+    <!-- Header Section -->
+    <section id="header">
+        <div class="header-left">
+            <img src="{% static 'Images/Logo.png' %}" class="logo" alt="logo">
+            {% if user.is_authenticated %}
+                <h1 class="heading">Welcome, Your home is protected. PLease Watch the live stream if any suspicious Actitvity reported </h1>
+                <div class="course-btn1">
+                <a class="common-btn1" href="{% url 'start' %}">Watch stream</a>
+            </div>
+            {% else %}
+                <h1 class="heading">If you Already Have an Account <br> Please Log in </h1>
+                <div class="course-btn1">
+                    <a class="common-btn1">Login</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="header-right">
+            <img src="{% static 'Images/main.svg' %}">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-left">
+            <img src="{% static 'Images/About us.svg' %}">
+        </div>
+        <div class="about-right">
+            <div class="about-text">
+                <h1>About us</h1>
+                <br><br>
+                <p>We are a team of passionate  engineers from Pune Institute of Computer Technology pursuing Electronics and Telecommunications engineering </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Seaction -->
+    <section id = "features">
+        <div class="feature-row">
+            <div class="feature-col">
+                <img src="{% static 'Images/feature1.svg' %}" alt="">
+                <h4>24/7 Home Survelliance</h4><br><br>
+                <p>We Provide Live Survelliance of your <br>
+                    home to anywhere in the world</p>
+            </div>
+            <div class="feature-col">
+                <img src="{% static 'Images/Feature 2.png' %}" alt="">
+                <h4>Face Recognition</h4><br><br>
+                <p>Our camera is equipped with not only live streaming <br> but it can aslo detect and recognise faces</p>
+            </div>
+            <div class="feature-col">
+                <img src="{% static 'Images/Feature3.svg' %}">
+                <h4>Email Alerts</h4><br><br>
+                <p>Get Alerts on your registered email for any any<br>suspicious Actitvity so have access to the live stream</p>
+            </div>
+        </div>    
+    </section>
     
+    <section id="courses">
+        <div class="course-row">
+            <div class="course-left-col">
+                <div class="course-text">
+                    <h1>Free Home Delivery</h1>
+                    <br><br>
+                    <p>Yes!! You Read that, get free Home delivery of our product within 3-5 business days.
+                        All over India
+                    </p>
+                    
+                </div>
+                <div class="course-btn">
+                    <button class="common-btn">Buy Now</button>
+                </div>
+
+            </div>
+            <div class="course-right-col">
+                <img src="{% static 'Images/Delivery.svg' %}" alt="courses">
+            </div>
+        </div>
+    </section>
+
+    <section id="offers">
+        <div class="about-left">
+            <img src="{% static 'Images/discount.svg' %}">
+        </div>
+        <div class="about-right">
+            <div class="about-text">
+                <h1>Special Offers</h1>
+                <br><br>
+                <p>We have some special offers and discounts for limited period of time</p>
+            </div>
+        </div>
+    </section>
+
+    <section id = "contact">
+        <div class="container contact-row">
+            <div class="contact-left-col">
+                <div class="contact-text">
+                    <h1>Sign Up and<br>
+                        We will reach Up to<br></h1>
+                    <form>
+                        <input type="text" placeholder="Enter Your Name">
+                        <input type="email" placeholder="Enter Your Email">
+                        <input type="password" placeholder="Enter Your password">
+                    </form>
+                    <div class="contact-btns">
+                        <button class="common-btn">Sign Up</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contact-right-col">
+                <img src="{% static 'Images/contact us.svg' %}">
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <hr>
+        </div>
+    </section>
 </body>
 </html>

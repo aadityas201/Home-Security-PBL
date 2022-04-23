@@ -1,0 +1,161 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Id start with # */
+/* Header Starts Here */
+#header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-left{
+    flex-basis: 30%;
+}
+
+.header-right{
+    flex-basis: 70%;
+    height: 100vh;
+}
+
+.header-right img{
+    width: 100%;
+    padding-top: 150px;
+    height: 700px;
+}
+
+#about, #offers{
+    padding: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.about-left{
+    flex-basis: 50%;
+}
+.about-left img{
+    width: 100%;
+}
+.about-right{
+    flex-basis: 50%;
+    text-align: right;
+}
+.about-text{
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+#features{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.feature-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.feature-col{
+    flex-basis: 33%;
+    text-align: center;
+
+}
+.feature-col img{
+    height: 200px;
+}
+
+.feature-btn{
+  margin-top: 100px;  
+  border: 5px solid rgb(33, 51, 153);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.common-btn{
+    height: 40px;
+    width: 100px;
+    background-color: white;
+}
+
+.heading{
+    margin-left: 100px;
+}
+.common-btn1{
+    height: 40px;
+    width: 100px;
+    background-color: white;
+} 
+.course-btn1 {
+  margin: 30px 40px 0px 150px;
+  height: 20px;
+  width: 100px;
+  border: 5px solid rgb(33, 51, 153);
+  background-color: white;
+  text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+#courses, #contact{
+    margin: 100px 0px;
+}
+.course-row, .contact-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.course-left-col, .contact-left-col{
+    flex-basis: 50%;
+}
+.course-right-col, .contact-right-col{
+    flex-basis: 50%;
+}
+.course-right-col img, .contact-right-col img{
+    width: 100%;
+}
+
+.course-text, .contact-text{
+    max-width: 500px;
+    margin-left: 100px;
+    display: inline-block;
+  
+}
+.course-btn{
+    margin: 30px 40px 0px 100px;
+    height: 40px;
+    width: 100px;
+    border: 5px solid rgb(33, 51, 153);
+    background-color: white;
+}
+form{
+    max-width: 350px;
+    margin: 30px 0px;
+}
+
+form input{
+    width: 400px;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 2px solid rgb(33, 51, 153);;
+}
+
+#footer{
+    
+    padding: 50px 0 30px;
+}
+hr{
+    border: 2px solid rgb(33, 51, 153);
+}

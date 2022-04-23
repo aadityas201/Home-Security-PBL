@@ -10,7 +10,10 @@ def home(request):
     return render(request, 'index.html')
 
 def live_stream(request):
-    return render(request,'stream.html')
+    if(request.user.is_authenticated):
+        return render(request,'stream.html')
+    else:
+        return HttpResponseRedirect(reverse('Home'))
 
 def gen(camera):
     while True:
@@ -23,4 +26,4 @@ def stream(request):
                                  content_type='multipart/x-mixed-replace; boundary=frame')
 
 def stop(request):
-    return HttpResponseRedirect(reverse('home'))
+    return HttpResponseRedirect(reverse('Home'))
